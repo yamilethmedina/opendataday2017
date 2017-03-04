@@ -15,8 +15,7 @@
     <% @flood.each do |flood| %>
         <th><%= flood.date_of_report %></th>
         <th><%= flood.description %></th>
-        <th><%= flood.latitude %></th>
-        <th><%= flood.longitude %></th>
+        <th><%= flood.address %></th>
         <th><%= flood.salinity.to_f %> <%= flood.salinity_units %> </th>
         <th><%= flood.water_depth.to_f %> <%= flood.water_depth_units %></th>
         </tr>
