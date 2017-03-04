@@ -1,0 +1,83 @@
+<div class="row">
+  <div class="col-sm-12">
+    <h1>Document a Flood</h1>
+
+    <p>[add links]</p>
+
+    <hr />
+
+    <%= form_for @flood do |f| %>
+      <div class="form-group">
+        <%= label_tag "Name" %>
+
+        <div class="form-inline">
+          <div class="form-group">
+            <%= f.text_field :first_name, class: "form-control" %>
+            <span class="help-block">First name</span>
+          </div>
+
+          <div class="form-group">
+            <%= f.text_field :last_name, class: "form-control" %>
+            <span class="help-block">Last name</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :email, nil, style: "display: block" %>
+        <%= f.text_field :email, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :date_of_report, nil, style: "display: block" %>
+        <%= f.datetime_local_field :date_of_report, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :location, nil, style: "display: block" %>
+        <%= f.text_field :location, class: "form-control" %>
+      </div>
+
+      <div class="form-group" id="gmap">
+        Map
+      </div>
+
+      <div class="form-group">
+        <div class="form-inline">
+          <div class="form-group">
+            <%= f.label :salinity, nil, style: "display: block" %>
+            <%= f.number_field :salinity, class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :salinity_units, "Units", style: "display: block" %>
+            <%= f.text_field :salinity_units, class: "form-control" %>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="form-inline">
+          <div class="form-group">
+            <%= f.label :water_depth, nil, style: "display: block" %>
+            <%= f.number_field :water_depth, class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :water_depth_units, "Units", style: "display: block" %>
+            <%= f.text_field :water_depth_units, class: "form-control" %>
+          </div>
+        </div>
+      </div>
+
+      <%= f.fields_for :attachments do |af| %>
+        <div class="form-group">
+          <%= af.label :upload, nil, style: "display: block" %>
+          <%= af.file_field :upload, class: "form-control" %>
+        </div>
+      <% end %>
+
+      <%= f.submit "Submit Report", class: "btn btn-success" %>
+    <% end %>
+  </div>
+</div>

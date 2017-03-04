@@ -14,10 +14,10 @@
 *= stub active_admin
 
 *= require_self
+*= require bootstrap-cerulean.min
 */
 @import "bootstrap_configuration";
 @import "bootstrap-sprockets";
-@import "bootstrap";
 
 //->Prelang (ui_framework:twitter_bootstrap)
 
@@ -29,4 +29,8 @@
 // Constrain forms for models (scaffolded models) so they aren't full page width.
 .form-model {
   max-width: 750px;
+}
+
+footer {
+  margin-top: 20px;
 }

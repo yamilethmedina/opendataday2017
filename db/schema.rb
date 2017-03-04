@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 20170304163102) do
   create_table "attachments", force: true do |t|
     t.integer  "flood_id"
     t.string   "upload_file_name"
-    t.string   "upload_file_type"
+    t.string   "upload_content_type"
     t.integer  "upload_file_size"
     t.datetime "created_at"
     t.datetime "updated_at"

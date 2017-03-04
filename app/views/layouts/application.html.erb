@@ -5,14 +5,21 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-<!-- Prelang: Analytics / Google Analytics -->
-    <%= analytics_init if Rails.env.production? or Rails.env.development? %><meta name="viewport" content="width=device-width, initial-scale=1"/></head>
+  <%= analytics_init if Rails.env.production? or Rails.env.development? %>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
 <body>
+
 <%= render partial: "elements/navbar" %>
 <%= bootstrap_flash %>
 
+<div class="container">
+  <%= yield %>
+</div>
 
-<%= yield %>
+<footer>
+  Open Data Day &copy; 2017
+</footer>
 
 </body>
 </html>
