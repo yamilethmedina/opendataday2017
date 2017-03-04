@@ -7,8 +7,6 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'floods#new'
 
-  get "/pages/*id" => 'pages#show', as: :page, format: false
-
 
 
   # Example of regular route:
