@@ -1,4 +1,4 @@
-![Open Data Day Logo](https://raw.githubusercontent.com/yamilethmedina/opendataday2017/master/app/assets/images/cfm-odd-logo.png)
+![Open Data Day Logo](cfm-odd-logo.png)
 
 # Miami Open Data Day 2017
 
