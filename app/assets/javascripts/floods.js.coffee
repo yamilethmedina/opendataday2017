@@ -45,7 +45,7 @@ $ ->
   # Click to add more file upload fields
   # id="flood_attachments_attributes_0_upload" name="flood[attachments_attributes][0][upload]"
   $("#fileAdd").on 'click', ->
-    field = fileFieldTemplate.clone().removeClass '.duplicateable-file-field'
+    field = fileFieldTemplate.clone().removeClass 'duplicateable-file-field'
     num = $(":file").length
     name = field.attr('name').replace '[0]', "[#{num}]"
     id = field.attr('id').replace '_0_', "_#{num}_"
