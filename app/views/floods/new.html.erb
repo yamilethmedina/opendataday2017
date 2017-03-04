@@ -35,6 +35,15 @@
       </div>
 
       <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <%= f.label :description, "Describe Flood", style: "display: block" %>
+            <%= f.text_area :description, class: "form-control" %>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
         <div class="col-sm-6">
           <div class="form-group">
             <%= f.label :address, nil, style: "display: block" %>
@@ -89,13 +98,15 @@
       </div>
 
       <div>
-        <%= f.fields_for :attachments do |af| %>
-          <div class="form-group">
-            <%= af.label :upload, "Upload Images and Videos", style: "display: block" %>
-            <%= af.file_field :upload, class: "form-control duplicateable-file-field" %>
-          </div>
-        <% end %>
-
+        <div id="fileFields">
+          <%= f.fields_for :attachments do |af| %>
+            <div class="form-group">
+              <%= af.label :upload, "Upload Images and Videos", style: "display: block" %>
+              <%= af.file_field :upload, class: "form-control duplicateable-file-field" %>
+            </div>
+          <% end %>
+        </div>
+        
         <button type="button" id="fileAdd" class="btn btn-info">
           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
           Add another Image or Video
