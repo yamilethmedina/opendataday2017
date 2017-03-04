@@ -50,6 +50,7 @@ gem 'tzinfo-data'
 gem 'validates_formatting_of'
 gem 'paperclip'
 gem 'puma'
+gem 'aws-sdk', '~> 2.3'
 
 gem 'high_voltage', '~> 3.0.0'
 
