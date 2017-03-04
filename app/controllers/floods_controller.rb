@@ -26,6 +26,7 @@ class FloodsController < ApplicationController
       :email,
       :date_of_report,
       :location,
+      :address,
       :salinity,
       :salinity_units,
       :water_depth,

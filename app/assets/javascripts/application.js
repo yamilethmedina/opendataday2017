@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require bootstrap
 //= require jquery.geocomplete.min
+//= require jquery.geolocation.min
 //= require_tree .
