@@ -7,37 +7,49 @@
     <hr />
 
     <%= form_for @flood do |f| %>
-      <div class="form-group">
-        <%= label_tag "Name" %>
-
-        <div class="form-inline">
+      <div class="row">
+        <div class="col-sm-6">
           <div class="form-group">
-            <%= f.text_field :first_name, class: "form-control" %>
-            <span class="help-block">First name</span>
+            <%= label_tag "Name" %>
+
+            <div class="form-inline">
+              <div class="form-group">
+                <%= f.text_field :first_name, class: "form-control" %>
+                <span class="help-block">First name</span>
+              </div>
+
+              <div class="form-group">
+                <%= f.text_field :last_name, class: "form-control" %>
+                <span class="help-block">Last name</span>
+              </div>
+            </div>
           </div>
+        </div>
 
+        <div class="col-sm-6">
           <div class="form-group">
-            <%= f.text_field :last_name, class: "form-control" %>
-            <span class="help-block">Last name</span>
+            <%= f.label :email, nil, style: "display: block" %>
+            <%= f.text_field :email, class: "form-control" %>
           </div>
         </div>
       </div>
 
-      <div class="form-group">
-        <%= f.label :email, nil, style: "display: block" %>
-        <%= f.text_field :email, class: "form-control" %>
-      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <%= f.label :address, nil, style: "display: block" %>
+            <%= f.text_field :address, class: "form-control" %>
+            <%= f.hidden_field :latitude %>
+            <%= f.hidden_field :longitude %>
+          </div>
+        </div>
 
-      <div class="form-group">
-        <%= f.label :date_of_report, nil, style: "display: block" %>
-        <%= f.datetime_local_field :date_of_report, class: "form-control" %>
-      </div>
-
-      <div class="form-group">
-        <%= f.label :address, nil, style: "display: block" %>
-        <%= f.text_field :address, class: "form-control" %>
-        <%= f.hidden_field :latitude %>
-        <%= f.hidden_field :longitude %>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <%= f.label :date_of_report, nil, style: "display: block" %>
+            <%= f.datetime_local_field :date_of_report, class: "form-control" %>
+          </div>
+        </div>
       </div>
 
       <div id="mapwrap" class="form-group">
@@ -46,27 +58,32 @@
         </div>
       </div>
 
-      <div class="form-group">
-        <div class="form-inline">
-          
-            <%= f.label :salinity, nil, style: "display: block" %>
-            <%= f.number_field :salinity, class: "form-control" %>
-            <span class="help-block">ppt (0/00) (parts per trillion)</span>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <div class="form-inline">
+              <div class="form-group">
+                <%= f.label :salinity, nil, style: "display: block" %>
+                <%= f.number_field :salinity, class: "form-control" %>
+                <span class="help-block">ppt (0/00) (parts per trillion)</span>
+              </div>
+            </div>
           </div>
         </div>
-      
-     
 
-      <div class="form-group">
-        <div class="form-inline">
+        <div class="col-sm-6">
           <div class="form-group">
-            <%= f.label :water_depth, nil, style: "display: block" %>
-            <%= f.number_field :water_depth, class: "form-control" %>
-          </div>
+            <div class="form-inline">
+              <div class="form-group">
+                <%= f.label :water_depth, nil, style: "display: block" %>
+                <%= f.number_field :water_depth, class: "form-control" %>
+              </div>
 
-          <div class="form-group">
-            <%= f.label :water_depth_units, "Units", style: "display: block" %>
-            <%= f.select :water_depth_units, options_for_select(["inches", "centimeters", "1/8 inches"]), {}, class: "form-control" %>
+              <div class="form-group">
+                <%= f.label :water_depth_units, "Units", style: "display: block" %>
+                <%= f.select :water_depth_units, options_for_select(["inches", "centimeters", "1/8 inches"]), {}, class: "form-control" %>
+              </div>
+            </div>
           </div>
         </div>
       </div>
