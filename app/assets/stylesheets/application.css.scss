@@ -18,8 +18,12 @@
 */
 @import "bootstrap_configuration";
 @import "bootstrap-sprockets";
+@import "_variables";
 
 //->Prelang (ui_framework:twitter_bootstrap)
+
+$brand-primary: #2FA4E7;
+
 
 // Give everything in 'yield' margin to separate it.
 .yield {
@@ -33,4 +37,9 @@
 
 footer {
   margin-top: 20px;
+}
+
+.col-xs-12.col-md-12 {
+	background: $brand-primary;
+	color: $gray-lighter;
 }
