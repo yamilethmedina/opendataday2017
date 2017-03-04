@@ -26,7 +26,6 @@ $ ->
   $.geolocation.get(enableHighAccuracy: true).done (position)->
     latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude)
     setLatLng latlng.lat(), latlng.lng()
-
     address.geocomplete map: "#gmap", location: latlng
     postInitMap()
     reverseGeocode latlng, address
@@ -36,5 +35,4 @@ $ ->
 
   address.on "geocode:result", (event, result)->
     setLatLng result.geometry.location.lat(), result.geometry.location.lng()
-    console.log 'Result:', result
     postInitMap()
