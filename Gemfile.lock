@@ -147,6 +147,7 @@ GEM
     polyamorous (1.3.1)
       activerecord (>= 3.0)
     polyglot (0.3.5)
+    puma (2.16.0)
     rack (1.5.5)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -160,6 +161,11 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.1.4)
       sprockets-rails (~> 2.0)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.4)
+    rails_stdout_logging (0.0.4)
     railties (4.1.4)
       actionpack (= 4.1.4)
       activesupport (= 4.1.4)
@@ -232,7 +238,9 @@ DEPENDENCIES
   jquery-rails
   paperclip
   pg
+  puma
   rails (= 4.1.4)
+  rails_12factor
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   spring
@@ -240,6 +248,9 @@ DEPENDENCIES
   tzinfo-data
   uglifier (>= 1.3.0)
   validates_formatting_of
+
+RUBY VERSION
+   ruby 2.2.0p0
 
 BUNDLED WITH
    1.14.6
