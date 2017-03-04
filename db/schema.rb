@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170304163102) do
+ActiveRecord::Schema.define(version: 20170304181640) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -74,6 +74,8 @@ ActiveRecord::Schema.define(version: 20170304163102) do
     t.string   "water_depth_units"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "location"
+    t.string   "address"
   end
 
 end
