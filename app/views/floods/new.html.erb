@@ -88,14 +88,22 @@
         </div>
       </div>
 
-      <%= f.fields_for :attachments do |af| %>
-        <div class="form-group">
-          <%= af.label :upload, nil, style: "display: block" %>
-          <%= af.file_field :upload, class: "form-control" %>
-        </div>
-      <% end %>
+      <div>
+        <%= f.fields_for :attachments do |af| %>
+          <div class="form-group">
+            <%= af.label :upload, "Upload Images and Videos", style: "display: block" %>
+            <%= af.file_field :upload, class: "form-control duplicateable-file-field" %>
+          </div>
+        <% end %>
 
-      <%= f.submit "Submit Report", class: "btn btn-success" %>
+        <button type="button" id="fileAdd" class="btn btn-info">
+          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+          Add another Image or Video
+        </button>
+      </div>
+
+      <hr />
+      <%= f.submit "Submit Report", class: "btn btn-success btn-block" %>
     <% end %>
   </div>
 </div>
