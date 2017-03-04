@@ -2,7 +2,7 @@
 
 # Miami Open Data Day 2017
 
-## {{Sea Level Rise Data Collection Website #2}}
+## {{Sea Level Rise Data Collection Website}}
 
 Research on JotForm's mobile responsiveness and mapping/geolocation APIs to improve on flood submission form - and/or create new form and database
 
@@ -13,6 +13,9 @@ Research on JotForm's mobile responsiveness and mapping/geolocation APIs to impr
 **Ruby on Rails** proof of concept based on the Prelang app generator
 
 **Twitter Bootstrap**
+
+*Try it out here!*  [https://sea-level-rise-data-collection.herokuapp.com/](https://sea-level-rise-data-collection.herokuapp.com/)
+
 
 ## Team Members
 
