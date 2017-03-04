@@ -1,28 +1,18 @@
-== README
+![Open Data Day Logo](https://lh5.googleusercontent.com/d3VHLYLZP3K4V4DsPLvXqxX7Ac56ioXquHI0NMAFJojprd8hTduw6oESt7m9po4DrtnSiGCF2Zt06vk=w2560-h1452)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Miami Open Data Day 2017
 
-Things you may want to cover:
+## {{Sea Level Rise Data Collection Website #2}}
 
-* Ruby version
+Research on JotForm's mobile responsiveness and mapping/geolocation APIs to improve on flood submission form
+https://github.com/Code-for-Miami/OpenDataDay2017/issues/2
 
-* System dependencies
+## Info
 
-* Configuration
+Probably some text and html
 
-* Database creation
+## Team Members
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+- {{Yami Medina}}({{https://www.github.com/yamilethmedina}})
+- {{Julie Kramer}}({{https://www.github.com/thejuliekramer}})
+- {{Diego Salazar}}({{https://www.github.com/diegosalazar}})
