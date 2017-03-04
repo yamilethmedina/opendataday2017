@@ -9,24 +9,32 @@ $ ->
   lat_field = $ "#flood_latitude"
   long_field = $ "#flood_longitude"
   address = address
+  geo = new google.maps.Geocoder
+
+  postInitMap = (map)->
+    $('#mapwrap').height('400px').width 'auto'
+
+  setLatLng = (lat, lng) ->
+    lat_field.val lat
+    long_field.val lng
   
-  postInitMap = ->
-    map.parent().height('400px').width 'auto'
+  reverseGeocode = (latlng, addressField)->
+    geo.geocode 'location': latlng, (results, status) ->
+      if status == 'OK' && results[0]
+        addressField.val results[0].formatted_address
 
   $.geolocation.get(enableHighAccuracy: true).done (position)->
     latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude)
-    lat_field.val position.coords.latitude
-    long_field.val position.coords.longitude
-    address.geocomplete map: map, location: latlng
+    setLatLng latlng.lat(), latlng.lng()
+
+    address.geocomplete map: "#gmap", location: latlng
     postInitMap()
-    console.log 'Positon:', position
-    console.log 'Map:', address.geocomplete('map')
+    reverseGeocode latlng, address
 
   address.on 'focus', ->
-    address.geocomplete map: map
+    address.geocomplete map: "#gmap"
 
   address.on "geocode:result", (event, result)->
-    lat_field.val result.geometry.location.lat()
-    long_field.val result.geometry.location.lng()
+    setLatLng result.geometry.location.lat(), result.geometry.location.lng()
     console.log 'Result:', result
     postInitMap()
