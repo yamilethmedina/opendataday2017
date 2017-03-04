@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  flood_id: 
+  upload_file_name: MyString
+  upload_file_type: MyString
+  upload_file_size: 1
+
+two:
+  flood_id: 
+  upload_file_name: MyString
+  upload_file_type: MyString
+  upload_file_size: 1
