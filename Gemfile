@@ -50,6 +50,8 @@ gem 'tzinfo-data'
 gem 'validates_formatting_of'
 gem 'paperclip'
 
+gem 'high_voltage', '~> 3.0.0'
+
 group :development do
   gem 'better_errors'
 end
