@@ -1,0 +1,25 @@
+<h1>Flood Data</h1>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Date</th>
+    <th>Description</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+    <th>Salinity</th>
+    <th>Water Depth</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <% @flood.each do |flood| %>
+        <th><%= flood.date_of_report %></th>
+        <th><%= flood.description %></th>
+        <th><%= flood.latitude %></th>
+        <th><%= flood.longitude %></th>
+        <th><%= flood.salinity.to_f %> <%= flood.salinity_units %> </th>
+        <th><%= flood.water_depth.to_f %> <%= flood.water_depth_units %></th>
+        </tr>
+    <% end %>
+    </tbody>
+</table>

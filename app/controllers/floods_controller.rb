@@ -1,4 +1,9 @@
 class FloodsController < ApplicationController
+
+  def index
+    @flood = Flood.all
+  end
+
   def new
     @flood = Flood.new
     @flood.attachments.build
