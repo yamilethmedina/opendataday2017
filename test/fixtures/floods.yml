@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  date_of_report: 2017-03-04 16:31:02
+  description: MyText
+  latitude: MyString
+  longitude: MyString
+  salinity: 9.99
+  salinity_units: MyString
+  water_depth: 9.99
+  water_depth_units: MyString
+
+two:
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  date_of_report: 2017-03-04 16:31:02
+  description: MyText
+  latitude: MyString
+  longitude: MyString
+  salinity: 9.99
+  salinity_units: MyString
+  water_depth: 9.99
+  water_depth_units: MyString
