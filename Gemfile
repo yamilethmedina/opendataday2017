@@ -54,6 +54,8 @@ gem 'aws-sdk', '~> 2.3'
 
 gem 'high_voltage', '~> 3.0.0'
 
+gem 'figaro'
+
 group :production do
   gem 'rails_12factor'
 end

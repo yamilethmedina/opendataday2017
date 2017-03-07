@@ -101,6 +101,8 @@ GEM
     debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.7.0)
+    figaro (1.1.1)
+      thor (~> 0.14)
     formtastic (3.1.5)
       actionpack (>= 3.2.13)
     formtastic_i18n (0.6.0)
@@ -242,6 +244,7 @@ DEPENDENCIES
   bundler
   coffee-rails (~> 4.0.0)
   devise!
+  figaro
   google-analytics-rails
   high_voltage (~> 3.0.0)
   jbuilder (~> 2.0)
