@@ -1,0 +1,30 @@
+---
+pid: 11164
+config: !ruby/object:Puma::Configuration
+  cli_options: 
+  conf: 
+  options:
+    :min_threads: 1
+    :max_threads: 6
+    :quiet: false
+    :debug: false
+    :binds:
+    - unix:///home/deploy/opendataday2017/shared/sockets/puma.sock
+    :workers: 1
+    :daemon: false
+    :mode: :http
+    :worker_timeout: 60
+    :worker_boot_timeout: 60
+    :worker_shutdown_timeout: 30
+    :remote_address: :socket
+    :config_file: config/puma.rb
+    :environment: production
+    :redirect_stdout: "/home/deploy/opendataday2017/shared/log/puma.stdout.log"
+    :redirect_stderr: "/home/deploy/opendataday2017/shared/log/puma.stderr.log"
+    :redirect_append: true
+    :pidfile: "/home/deploy/opendataday2017/shared/pids/puma.pid"
+    :state: "/home/deploy/opendataday2017/shared/pids/puma.state"
+    :control_url: unix:///tmp/puma-status-1489167828980-11164
+    :control_url_temp: "/tmp/puma-status-1489167828980-11164"
+    :control_auth_token: 12984957167cd43496b243edea76b9
+    :tag: opendataday2017
