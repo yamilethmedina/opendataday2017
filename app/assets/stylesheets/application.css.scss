@@ -15,6 +15,8 @@
 
 *= require_self
 *= require bootstrap-cerulean.min
+*= require bootstrap/bootstrap-rails-tooltip
+*= require bootstrap/bootstrap-rails-popover
 */
 @import "bootstrap_configuration";
 @import "bootstrap-sprockets";
@@ -42,4 +44,10 @@ footer {
 .col-xs-12.col-md-12 {
 	background: $brand-primary;
 	color: $gray-lighter;
+}
+
+
+.popover-content{
+    max-width:100%;
+    overflow-wrap: break-word;
 }

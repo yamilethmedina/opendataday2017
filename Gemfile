@@ -56,6 +56,8 @@ gem 'high_voltage', '~> 3.0.0'
 
 gem 'figaro'
 
+gem 'bootstrap-popover-rails'
+
 group :production do
   gem 'rails_12factor'
 end
