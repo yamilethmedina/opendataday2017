@@ -14,7 +14,7 @@ Research on JotForm's mobile responsiveness and mapping/geolocation APIs to impr
 
 **Twitter Bootstrap**
 
-*Try it out here!*  [https://bit.do/LocalWarmingFloodForm](https://bit.do/LocalWarmingFloodForm)
+*Try it out here!*  [https:/www.localwarmingkingtideform.us](https:/www.localwarmingkingtideform.us)
 
 
 ## Team Members
