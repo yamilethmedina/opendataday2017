@@ -1,8 +1,11 @@
-![Open Data Day Logo](cfm-odd-logo.png)
+# King Tide Form [![Code Climate](https://codeclimate.com/github/Code-for-Miami/king-tide-form/badges/gpa.svg)](https://codeclimate.com/github/Code-for-Miami/king-tide-form)
+_Produced for Miami Open Data Day 2017_
 
-# Miami Open Data Day 2017
+> The data we are collecting is the first of its kind. But as you’ve seen, our citizen reports are collecting data using a rudimentary form. We’d like to see a better way for everyday citizens and data scientists to submit their own observations and reports. While keeping the integrity of this form (no fields should be removed), we’d like to see a mobile/desktop friendly solution that has UX considered for our volunteers.
 
-## {{Sea Level Rise Data Collection Website}}
+Here is what the current site looks like: http://citizeneyes.org/flood/
+
+
 
 Research on JotForm's mobile responsiveness and mapping/geolocation APIs to improve on flood submission form - and/or create new form and database
 
@@ -22,3 +25,5 @@ Research on JotForm's mobile responsiveness and mapping/geolocation APIs to impr
 - [Yami Medina](https://www.github.com/yamilethmedina)
 - [Julie Kramer](https://www.github.com/thejuliekramer)
 - [Diego Salazar](https://www.github.com/diegosalazar)
+
+![Open Data Day Logo](cfm-odd-logo.png)
