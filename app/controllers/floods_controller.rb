@@ -36,6 +36,9 @@ class FloodsController < ApplicationController
       :salinity_units,
       :water_depth,
       :water_depth_units,
+      :latitude,
+      :longitude,
+      :upload,
       attachments_attributes: [
         :upload_file_name,
         :upload_file_size,
