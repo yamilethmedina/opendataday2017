@@ -71,7 +71,7 @@
         <div class="col-sm-6">
           <div class="form-group">
             <div class="form-inline">
-              <div class="form-group" data-content="test content <a href='http://citizeneyes.org/app/instructions.html' title='Instructions'>More info</a>" data-toggle="popover" data-html="true" title="Salinity">
+              <div class="form-group" data-content="You can use a refractometer to measure salinity in flood waters. <a href='/pages/instructions' title='Instructions'>More info</a>" data-toggle="popover" data-placement="right" data-html="true" title="Salinity">
                 <%= f.label :salinity, nil, style: "display: block" %>
                 <%= f.number_field :salinity, class: "form-control" %>
                 <span class="help-block">ppt (0/00) (parts per trillion)</span>
@@ -83,7 +83,7 @@
         <div class="col-sm-6">
           <div class="form-group">
             <div class="form-inline">
-              <div class="form-group" data-content="This will displayed as popover contssssssdddddddddddddddddddddddddddddddddddddddddddent" data-toggle="popover" data-placement="bottom" data-html="true" title="Water Depth">
+              <div class="form-group" data-content="The local sea level can increase for a variety of reasons, for example, if the water is unusually warm, it increases the water depth through thermal expansion. Sea level can also rise during persistent low pressure in the atmosphere, which draws the water’s surface upward. (Source: <a href='https://weather.com/news/news/miami-beach-flooding-high-king-tide'>https://weather.com/news/news/miami-beach-flooding-high-king-tide</a>)" data-toggle="popover" data-placement="bottom" data-html="true" title="Water Depth">
                 <%= f.label :water_depth, nil, style: "display: block" %>
                 <%= f.number_field :water_depth, class: "form-control" %>
               </div>
