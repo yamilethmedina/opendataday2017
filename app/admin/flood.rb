@@ -14,5 +14,4 @@ ActiveAdmin.register Flood do
 #   permitted
 # end
 
-
 end

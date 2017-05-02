@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170304181640) do
+ActiveRecord::Schema.define(version: 20170502001612) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,21 +61,25 @@ ActiveRecord::Schema.define(version: 20170304181640) do
   add_index "attachments", ["flood_id"], name: "index_attachments_on_flood_id", using: :btree
 
   create_table "floods", force: :cascade do |t|
-    t.string   "first_name",        limit: 255
-    t.string   "last_name",         limit: 255
-    t.string   "email",             limit: 255
+    t.string   "first_name",              limit: 255
+    t.string   "last_name",               limit: 255
+    t.string   "email",                   limit: 255
     t.datetime "date_of_report"
     t.text     "description"
-    t.string   "latitude",          limit: 255
-    t.string   "longitude",         limit: 255
+    t.string   "latitude",                limit: 255
+    t.string   "longitude",               limit: 255
     t.decimal  "salinity"
-    t.string   "salinity_units",    limit: 255
+    t.string   "salinity_units",          limit: 255
     t.decimal  "water_depth"
-    t.string   "water_depth_units", limit: 255
+    t.string   "water_depth_units",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "location"
-    t.string   "address",           limit: 255
+    t.string   "address",                 limit: 255
+    t.string   "attachment_file_name"
+    t.string   "attachment_content_type"
+    t.integer  "attachment_file_size"
+    t.datetime "attachment_updated_at"
   end
 
 end
