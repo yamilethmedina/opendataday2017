@@ -14,4 +14,5 @@
 class Attachment < ActiveRecord::Base
   belongs_to :flood
   has_attached_file :upload
+  validates_attachment_content_type :upload, content_type: /\Aimage\/.*\z/
 end

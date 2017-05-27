@@ -6,7 +6,7 @@
 
     <hr />
 
-    <%= form_for(@flood, multipart: true) do |f| %>
+    <%= form_for(@flood, url: floods_path, multipart: true) do |f| %>
       <div class="row">
         <div class="col-sm-6">
           <div class="form-group">
@@ -102,7 +102,7 @@
           <%= f.fields_for :attachments do |af| %>
             <div class="form-group">
               <%= af.label :upload, "Upload Images and Videos", style: "display: block" %>
-              <%= af.file_field :upload, class: "form-control duplicateable-file-field" %>
+              <%= af.file_field :upload, as: :file, class: "form-control duplicateable-file-field" %>
             </div>
           <% end %>
         </div>

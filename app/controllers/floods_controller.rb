@@ -38,11 +38,11 @@ class FloodsController < ApplicationController
       :water_depth_units,
       :latitude,
       :longitude,
-      :upload,
+      :attachment,
+      :description,
       attachments_attributes: [
-        :upload_file_name,
-        :upload_file_size,
-        :upload_content_type
+        :upload,
+        :attachment
       ]
     )
   end

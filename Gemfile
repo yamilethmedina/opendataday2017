@@ -48,7 +48,7 @@ gem 'devise'
 gem 'binding_of_caller'
 gem 'tzinfo-data'
 gem 'validates_formatting_of'
-gem 'paperclip'
+gem "paperclip", "~> 5.0.0"
 gem 'puma'
 gem 'aws-sdk', '~> 2.3'
 

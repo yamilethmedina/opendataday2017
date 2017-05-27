@@ -1,6 +1,5 @@
 ActiveAdmin.register Attachment do
   permit_params :upload_file_name, :upload_file_type, :upload_file_size
-
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
