@@ -6,7 +6,7 @@ class FloodsController < ApplicationController
 
   def new
     @flood = Flood.new
-    @flood.attachments.build
+    @flood.documents.build
   end
 
   def create
@@ -38,11 +38,11 @@ class FloodsController < ApplicationController
       :water_depth_units,
       :latitude,
       :longitude,
-      :attachment,
+      :document,
       :description,
-      attachments_attributes: [
-        :upload,
-        :attachment
+      documents_attributes: [
+        :upload1,
+        :document
       ]
     )
   end

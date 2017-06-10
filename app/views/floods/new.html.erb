@@ -99,10 +99,10 @@
 
       <div>
         <div id="fileFields">
-          <%= f.fields_for :attachments do |af| %>
+          <%= f.fields_for :documents do |af| %>
             <div class="form-group">
-              <%= af.label :upload, "Upload Images and Videos", style: "display: block" %>
-              <%= af.file_field :upload, as: :file, class: "form-control duplicateable-file-field" %>
+              <%= af.label :upload1, "Upload Images and Videos", style: "display: block" %>
+              <%= af.file_field :upload1, as: :file, class: "form-control duplicateable-file-field" %>
             </div>
           <% end %>
         </div>

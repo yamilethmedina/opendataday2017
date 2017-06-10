@@ -16,7 +16,7 @@
         <th><%= flood.address %></th>
         <th><%= flood.salinity.to_f %> <%= flood.salinity_units %> </th>
         <th><%= flood.water_depth.to_f %> <%= flood.water_depth_units %></th>
-
+        <th><%= flood.document.inspect %></th>
         </tr>
     <% end %>
     </tbody>

@@ -21,15 +21,15 @@
 #
 
 class Flood < ActiveRecord::Base
-  has_many :attachments
-  has_attached_file :attachment,
+  has_many :documents
+  has_attached_file :document,
   					:storage => :s3,
   					:s3_credentials => Proc.new{|a| a.instance.s3_credentials }
   def s3_credentials
     {:bucket => ENV["AWS_S3_BUCKET_NAME"], :access_key_id => ENV["AWS_ACCESS_KEY_ID"], :secret_access_key => ENV["AWS_SECRET_ACCESS_KEY"], :s3_region => ENV["AWS_DEFAULT_REGION"]}
   end
-  validates_attachment_content_type :attachment, content_type: /\Aimage\/.*\z/
+  validates_attachment_content_type :document, content_type: /\Aimage\/.*\z/
   validates_formatting_of :email, using: :email
-  accepts_nested_attributes_for :attachments
+  accepts_nested_attributes_for :documents
   store :location, coder: JSON
 end
