@@ -49,7 +49,7 @@ $ ->
     num = $(":file").length
     name = field.attr('name').replace '[0]', "[#{num}]"
     id = field.attr('id').replace '_0_', "_#{num}_"
-    wrap = $ "<div class='form-group' />"
+    wrap = $ "<div class='file-upload-div' />"
     field.attr(id: id, name: name).appendTo wrap
     wrap.appendTo "#fileFields"
     

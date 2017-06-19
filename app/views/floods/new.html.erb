@@ -7,114 +7,111 @@
     <hr />
 
     <%= form_for(@flood, url: floods_path, multipart: true) do |f| %>
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="form-group">
-            <%= label_tag "Name" %>
-
-            <div class="form-inline">
-              <div class="form-group">
-                <%= f.text_field :first_name, class: "form-control" %>
-                <span class="help-block">First name</span>
-              </div>
-
-              <div class="form-group">
-                <%= f.text_field :last_name, class: "form-control" %>
-                <span class="help-block">Last name</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6">
-          <div class="form-group">
-            <%= f.label :email, nil, style: "display: block" %>
-            <%= f.text_field :email, class: "form-control" %>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="form-group">
-            <%= f.label :description, "Describe Flood", style: "display: block" %>
-            <%= f.text_area :description, class: "form-control" %>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="form-group">
-            <%= f.label :address, nil, style: "display: block" %>
-            <%= f.text_field :address, class: "form-control" %>
-            <%= f.hidden_field :latitude %>
-            <%= f.hidden_field :longitude %>
-          </div>
-        </div>
-
-        <div class="col-sm-6">
-          <div class="form-group">
-            <%= f.label :date_of_report, nil, style: "display: block" %>
-            <%= f.datetime_local_field :date_of_report, class: "form-control" %>
-          </div>
-        </div>
-      </div>
-
-      <div id="mapwrap" class="form-group">
-        <div id="gmap">
-          Search location to see map
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="form-group">
-            <div class="form-inline">
-              <div class="form-group" data-content="You can use a refractometer to measure salinity in flood waters. <a href='/pages/instructions' title='Instructions'>More info</a>" data-toggle="popover" data-placement="right" data-html="true" title="Salinity">
-                <%= f.label :salinity, nil, style: "display: block" %>
-                <%= f.number_field :salinity, class: "form-control" %>
-                <span class="help-block">ppt (0/00) (parts per trillion)</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6">
-          <div class="form-group">
-            <div class="form-inline">
-              <div class="form-group" data-content="The local sea level can increase for a variety of reasons, for example, if the water is unusually warm, it increases the water depth through thermal expansion. Sea level can also rise during persistent low pressure in the atmosphere, which draws the water’s surface upward. (Source: <a href='https://weather.com/news/news/miami-beach-flooding-high-king-tide'>https://weather.com/news/news/miami-beach-flooding-high-king-tide</a>)" data-toggle="popover" data-placement="bottom" data-html="true" title="Water Depth">
-                <%= f.label :water_depth, nil, style: "display: block" %>
-                <%= f.number_field :water_depth, class: "form-control" %>
-              </div>
-
-              <div class="form-group">
-                <%= f.label :water_depth_units, "Units", style: "display: block" %>
-                <%= f.select :water_depth_units, options_for_select(["inches", "centimeters", "1/8 inches"]), {}, class: "form-control" %>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <div id="fileFields">
-          <%= f.fields_for :attachments do |af| %>
+        <div class="row">
+          <div class="col-sm-6">
             <div class="form-group">
-              <%= af.label :upload, "Upload Images and Videos", style: "display: block" %>
-              <%= af.file_field :upload, as: :file, class: "form-control duplicateable-file-field" %>
-            </div>
-          <% end %>
-        </div>
-        
-        <button type="button" id="fileAdd" class="btn btn-info">
-          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-          Add another Image or Video
-        </button>
-      </div>
+              <%= label_tag "Name" %>
 
-      <hr />
-      <%= f.submit "Submit Report", class: "btn btn-success btn-block", data: { confirm: 'Thanks for your submission!' } %>
+              <div class="form-inline">
+                <div class="form-group">
+                  <%= f.text_field :first_name, placeholder: 'First Name', class: "form-control" %>
+                </div>
+
+                <div class="form-group">
+                  <%= f.text_field :last_name, placeholder: 'Last Name', class: "form-control" %>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <%= f.label :email, nil, class: 'flood-labels' %>
+              <%= f.text_field :email, class: "form-control" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <%= f.label :description, "Describe Flood", class: 'flood-labels' %>
+              <%= f.text_area :description, class: "form-control" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <%= f.label :address, nil, class: 'flood-labels' %>
+              <%= f.text_field :address, class: "form-control" %>
+              <%= f.hidden_field :latitude %>
+              <%= f.hidden_field :longitude %>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <%= f.label 'Date of Report', nil, class: 'flood-labels' %>
+              <%= f.datetime_local_field :date_of_report, class: "form-control" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div id="mapwrap" class="form-group">
+            <div id="gmap">
+              Search location to see map
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="form-group">
+              <div class="form-inline">
+                <div class="form-group" data-content="You can use a refractometer to measure salinity in flood waters. <a href='/pages/instructions' title='Instructions'>More info</a>" data-toggle="popover" data-placement="right" data-html="true" title="Salinity">
+                  <%= f.label :salinity, nil, class: 'flood-labels' %>
+                  <%= f.number_field :salinity, placeholder: 'ppt (0/00) (parts per trillion)', class: "salinity-input form-control" %>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="form-group">
+              <div class="form-inline">
+                <div class="form-group" data-content="The local sea level can increase for a variety of reasons, for example, if the water is unusually warm, it increases the water depth through thermal expansion. Sea level can also rise during persistent low pressure in the atmosphere, which draws the water’s surface upward. (Source: <a href='https://weather.com/news/news/miami-beach-flooding-high-king-tide'>https://weather.com/news/news/miami-beach-flooding-high-king-tide</a>)" data-toggle="popover" data-placement="bottom" data-html="true" title="Water Depth">
+                  <%= f.label :water_depth, nil, class: 'flood-labels' %>
+                  <%= f.number_field :water_depth, class: "form-control" %>
+                </div>
+
+                <div class="form-group">
+                  <%= f.label :water_depth_units, "Units", class: 'flood-labels' %>
+                  <%= f.select :water_depth_units, options_for_select(["inches", "centimeters", "1/8 inches"]), {}, class: "form-control" %>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-3 file-upload-div" id="fileFields">
+            <%= f.fields_for :attachments do |af| %>
+                <%= af.label :upload, "Upload Images and Videos", class: 'flood-label' %>
+                <%= af.file_field :upload, as: :file, class: "duplicateable-file-field" %>
+            <% end %>
+          </div>
+
+          <div class="col-sm-2">
+            <button type="button" id="fileAdd" class="btn btn-info">
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+              Add another Image or Video
+            </button>
+          </div>
+        </div>
+
+        <hr/>
+        <%= f.submit "Submit Report", class: "btn btn-success btn-block", data: { confirm: 'Thanks for your submission!' } %>
     <% end %>
   </div>
 </div>
