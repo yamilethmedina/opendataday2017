@@ -1,5 +1,11 @@
 class FloodsController < ApplicationController
 
+  def import
+    Flood.import(params[:file])
+
+    redirect_to admin_floods_path
+  end
+
   def index
     @flood = Flood.all
   end
