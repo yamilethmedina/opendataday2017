@@ -1,12 +1,18 @@
 class FloodsController < ApplicationController
 
+  def import
+    Flood.import(params[:file])
+
+    redirect_to admin_floods_path
+  end
+
   def index
     @flood = Flood.all
   end
 
   def new
     @flood = Flood.new
-    @flood.documents.build
+    @flood.attachments.build
   end
 
   def create
@@ -40,9 +46,9 @@ class FloodsController < ApplicationController
       :longitude,
       :document,
       :description,
-      documents_attributes: [
-        :upload1,
-        :document
+      attachments_attributes: [
+        :upload,
+        :attachment
       ]
     )
   end

@@ -9,15 +9,13 @@ ActiveAdmin.register_page "Dashboard" do
         small I18n.t("active_admin.dashboard_welcome.call_to_action")
       end
     end
-
-    # Here is an example of a simple dashboard with columns and panels.
-    #
+    
     # columns do
     #   column do
-    #     panel "Recent Posts" do
+    #     panel "Floods and Images" do
     #       ul do
-    #         Post.recent(5).map do |post|
-    #           li link_to(post.title, admin_post_path(post))
+    #         Flood.all do |flood|
+    #           li link_to(flood.date_of_report, admin_flood_path(flood))
     #         end
     #       end
     #     end
@@ -31,3 +29,4 @@ ActiveAdmin.register_page "Dashboard" do
     # end
   end # content
 end
+# end
