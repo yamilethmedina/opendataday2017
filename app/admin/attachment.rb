@@ -23,10 +23,11 @@ index do
     column :upload_file_type
     column :upload_file_size
     column 'Attachment URL' do |attachment|
+      # raise "hell"
+      if attachment.present?
   		full_file_path = "https://s3.amazonaws.com/sealevelriseimages/uploads/" + attachment.upload_file_name
-      full_file_path.to_s
-      
         link_to(full_file_path.to_s, full_file_path.to_s) 
+        end
       
     	
 
