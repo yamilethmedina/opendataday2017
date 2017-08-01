@@ -28,7 +28,7 @@ $ ->
   
   # Initialize geocoding plugins
 
-  $.geo.get(enableHighAccuracy: true).done (position)->
+  $.geolocation.get(enableHighAccuracy: true).done (position)->
     latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude)
     setLatLng latlng.lat(), latlng.lng()
     address.geocomplete map: "#gmap", location: latlng
