@@ -17,3 +17,13 @@
 /vendor/bundle
 # Ignore application configuration
 /config/application.yml
+/public/assets
+/public/system
+sftp-config.json
+/test/controllers/documents_controller_test.rb
+/test/fixtures/documents.yml
+/test/models/document_test.rb
+.DS_Store
+/app/.DS_Store
+/app/assets/.DS_Store
+/public/.DS_Store

@@ -1,5 +1,11 @@
 class FloodsController < ApplicationController
 
+  def import
+    Flood.import(params[:file])
+
+    redirect_to admin_floods_path
+  end
+
   def index
     @flood = Flood.all
   end
@@ -38,7 +44,7 @@ class FloodsController < ApplicationController
       :water_depth_units,
       :latitude,
       :longitude,
-      :attachment,
+      :document,
       :description,
       attachments_attributes: [
         :upload,
