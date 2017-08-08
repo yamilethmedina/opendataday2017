@@ -15,15 +15,15 @@ ActiveAdmin.register Attachment do
 index do
     selectable_column
     id_column
-    # column "Flood ID" do |flood|
-    #     flood.flood_id
-    #   end
-    column :flood_id
+    column 'Flood' do |attachment|
+      # if attachment.present?
+        link_to(attachment.flood_id, admin_flood_path(attachment.flood_id)) 
+        # end
+  end
     column :upload_file_name
     column :upload_file_type
     column :upload_file_size
     column 'Attachment URL' do |attachment|
-      # raise "hell"
       if attachment.present?
   		full_file_path = "https://s3.amazonaws.com/sealevelriseimages/uploads/" + attachment.upload_file_name
         link_to(full_file_path.to_s, full_file_path.to_s) 
